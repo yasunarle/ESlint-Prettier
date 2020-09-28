@@ -17,6 +17,9 @@
     "husky": "^4.3.0",
     "lint-staged": "^10.4.0"
   },
+  "lint-staged": {
+    "*": "npm run lint"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint"
