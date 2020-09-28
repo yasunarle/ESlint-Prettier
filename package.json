@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint ./src/*"
+    "lint": "eslint ./src/*"
   },
   "author": "",
   "license": "ISC",
@@ -16,12 +16,12 @@
     "husky": "^4.3.0",
     "lint-staged": "^10.4.0"
   },
-  "lint-staged": {
-    "*.js": "npm run lint"
-  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "*.js": "eslint --fix"
   }
 }
